@@ -52,7 +52,7 @@ public class ImdbInfo extends HttpServlet {
 		System.out.println(movie);
 		 
 		Client cli = Client.create();
-		WebResource resource = cli.resource("http://www.omdbapi.com"+"/?t="+movie);
+		WebResource resource = cli.resource("http://www.omdbapi.com"+"/?t="+movie+"&apikey=10217af4&");
 		String strResp =  resource.get(String.class);
 		ClientResponse resp = resource.get(ClientResponse.class);
 		ClientResponse cr = (ClientResponse) resp;
@@ -115,7 +115,7 @@ public class ImdbInfo extends HttpServlet {
 				response.getWriter().println("<br><i style=\"padding-left: 13cm\"> IMDB Rating</i><b>: "+obj.get("imdbRating")+"</b>");
 				response.getWriter().println("<br><i style=\"padding-left: 13cm\"> Awards</i><b>: "+obj.get("Awards")+"</b>");
 				
-				response.getWriter().println("<br><h6>Data in JSON Format<h6><textarea  style=\"width: 1300px; height: 60px; background-color: grey \" readonly>"+strResp+"</textarea>");
+				//response.getWriter().println("<br><h6>Data in JSON Format<h6><textarea  style=\"width: 1300px; height: 60px; background-color: grey \" readonly>"+strResp+"</textarea>");
 				response.getWriter().println("</body>");
 				response.getWriter().println("</html>");
 		}
