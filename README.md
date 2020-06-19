@@ -9,3 +9,6 @@ Technologies Used:
 
 The application works by making GET calls to omdbapi REST API based on the MOVIE SEARCHED on Search jsp, get the JSON response data from omdbapi server and extractig data from the response and print it in the servlet.
 
+
+URL pattern: http://localhost:5000/ImdbApp-0.0.1-SNAPSHOT/
+
