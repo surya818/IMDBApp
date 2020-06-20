@@ -52,7 +52,7 @@ public class ImdbInfo extends HttpServlet {
 		System.out.println(movie);
 		 
 		Client cli = Client.create();
-		WebResource resource = cli.resource("http://www.omdbapi.com"+"/?t="+movie+"&apikey=<YOUR_API_KEY>");
+		WebResource resource = cli.resource("http://www.omdbapi.com"+"/?t="+movie+"&apikey=10217af4&");
 		String strResp =  resource.get(String.class);
 		ClientResponse resp = resource.get(ClientResponse.class);
 		ClientResponse cr = (ClientResponse) resp;
