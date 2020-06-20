@@ -9,13 +9,19 @@ Technologies Used:
 
 The application works by making GET calls to omdbapi REST API based on the MOVIE SEARCHED on Search jsp, get the JSON response data from omdbapi server and extractig data from the response and print it in the servlet.
 
+***To have this example running , you need to get your own omdbapi API_KEY. You can get it from http://www.omdbapi.com/
+
+
+
 
 URL pattern: http://localhost:5000/ImdbApp-0.0.1-SNAPSHOT/
 
 
 
 Steps to run the app in docker
-1. Clone this repo
+1. Clone this repo. 
+*** Please update the ImdbInfo.java file with your API Key. Look for the line below and replace the API_KEY
+WebResource resource = cli.resource("http://www.omdbapi.com"+"/?t="+movie+"&apikey=<YOUR_API_KEY>");
 2. change directory to project root
 3. Here I have the pom file and the Dockerfile
 3. If you manually want to build using maven and containerize, 
